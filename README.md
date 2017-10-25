@@ -1,6 +1,6 @@
 # !!! Does not work with SDL 2.0.6 at the moment !!!
  - There is a bug with SDL 2.0.6 version in Audio subsystem which makes game crash / not play sound
- - If you have SDL 2.0.6 then downgrade to 2.0.5
+ - If you have SDL 2.0.6 then downgrade to 2.0.5 or upgrade to 2.0.7
 
 # OpenClaw - Captain Claw (1997) reimplementation
 
