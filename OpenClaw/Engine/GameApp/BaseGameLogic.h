@@ -136,6 +136,8 @@ protected:
     Point m_CurrentSpawnPosition;
 
 private:
+    TiXmlDocument DefaultSaves();
+
     void ExecuteStartupCommands(const std::string& startupCommandsFile);
     void CreateSinglePhysicsTile(int x, int y, const TileCollisionPrototype& proto);
     //void LoadGameWorkerThread(const char* pXmlLevelPath, float* pProgress, bool* pRet);

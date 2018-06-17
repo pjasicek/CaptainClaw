@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.2)
 
 option(Android "Android" OFF)
 
+set(DEFAULT_ASSETS_FOLDER "/usr/share/openclaw/"
+    CACHE STRING "AssetsFolder for auto-generated ~/.config/openclaw/config.xml")
+
 project(OpenClaw)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -22,6 +25,9 @@ add_subdirectory(libwap)
 include_directories(./Box2D/)
 include_directories(./libwap/)
 include_directories(./ThirdParty/)
+
+configure_file(config.h.in config.h)
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 # for android
 #include_directories(./ThirdParty/Tinyxml/)
